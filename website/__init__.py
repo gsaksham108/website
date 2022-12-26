@@ -4,13 +4,13 @@ from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
-DB_NAME = "database.db"
+DB_NAME = "users_f6vk.db"
 
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'hjshjhdjkk kjshkjdfff'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'postgres://saksham:aOKm6xFihpUlA6x8hgUAXdA4zLDGKQHb@dpg-ceklnkpgp3jlcslavpng-a.oregon-postgres.render.com/users_f6vk'
     db.init_app(app)
 
     from .views import views
